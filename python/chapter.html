@@ -1,0 +1,12 @@
+{% extends "base.html" %} 
+{% block title %}{{chapter}}{% endblock %} 
+{% block content %}
+<div class="card">
+  <div class="card-header">{{chapter}}</div>
+  <ul class="list-group list-group-flush">
+    {% for verse in verses %}
+    <li class="list-group-item">{{ loop.index }}. {{verse}}</li>
+    {% endfor %}
+  </ul>
+</div>
+{% endblock %}
